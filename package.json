@@ -1,0 +1,24 @@
+{
+  "name": "react-native-event-handler",
+  "version": "0.1.0",
+  "description": "Native Event Handler for react-native",
+  "main": "eventhandler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:koutalou/react-native-event-handler.git"
+  },
+  "keywords": [
+    "reactnative",
+    "screenshot",
+    "UIApplicationUserDidTakeScreenshot"
+  ],
+  "author": "koutalou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koutalou/react-native-event-handler/issues"
+  },
+  "homepage": "https://github.com/koutalou/react-native-event-handler#readme"
+}
