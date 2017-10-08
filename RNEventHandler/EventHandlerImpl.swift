@@ -9,7 +9,7 @@
 import UIKit
 
 @objc enum EventType: Int {
-    case userDidTakeScreenshot
+    case userDidTakeScreenshot = 1
 }
 
 @objc protocol EventHandlerDelegate {
@@ -17,11 +17,13 @@ import UIKit
 }
 
 /* Shard singleton class */
-class EventHandlerImpl {
+class EventHandlerImpl: NSObject {
     static let shared = EventHandlerImpl()
-    var delegate: EventHandlerDelegate?
+    weak var delegate: EventHandlerDelegate?
     
-    private init() {
+    private override init() {
+        super.init()
+        
         setupObserver()
     }
     

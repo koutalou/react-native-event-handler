@@ -8,23 +8,21 @@
 
 #import "RNEventHandler.h"
 
-@implementation RNEventHandler <EventHandlerDelegate> {
+@implementation RNEventHandler {
     RCTResponseSenderBlock callback;
 }
 
 RCT_EXPORT_MODULE()
 
-- (void)eventWithEventType:(EventType) eventType {
-    self.callback(@[ [NSNull null], @{ @"eventType": [NSString stringWithFormat:@"", eventType] } ]);
+- (void)eventWithEventType:(enum NSInteger) eventType {
+    self->callback(@[ [NSNull null], @{ @"eventType": [NSString stringWithFormat:@"%ld", eventType] } ]);
 }
 
-RCT_EXPORT_METHOD(callFunc:(NSDictionary*)dict findEvents:(RCTResponseSenderBlock)callback)
+RCT_EXPORT_METHOD(watch:(NSDictionary*)dict findEvents:(RCTResponseSenderBlock)callback)
 {
-    NSLog(@"dict: %@", dict);
-    
     EventHandlerImpl *eventHandler = [EventHandlerImpl shared];
     eventHandler.delegate = self;
-    self.callback = callback;
+    self->callback = callback;
 }
 
 @end

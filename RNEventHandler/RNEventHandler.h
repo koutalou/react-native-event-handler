@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <sys/utsname.h>
+#import "RNEventHandler-Swift.h"
 
 #if __has_include(<React/RCTAssert.h>)
 #import <React/RCTBridgeModule.h>
@@ -15,7 +16,7 @@
 #import "RCTBridgeModule.h"
 #endif
 
-@interface RNEventHandler : NSObject <RCTBridgeModule>
+@interface RNEventHandler : NSObject <RCTBridgeModule, EventHandlerDelegate>
 
 @end
 
