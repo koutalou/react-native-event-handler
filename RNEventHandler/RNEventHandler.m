@@ -18,7 +18,7 @@ RCT_EXPORT_MODULE()
     self->callback(@[ [NSNull null], @{ @"eventType": [NSString stringWithFormat:@"%ld", eventType] } ]);
 }
 
-RCT_EXPORT_METHOD(watch:(NSDictionary*)dict findEvents:(RCTResponseSenderBlock)callback)
+RCT_EXPORT_METHOD(watch:(RCTResponseSenderBlock)callback)
 {
     EventHandlerImpl *eventHandler = [EventHandlerImpl shared];
     eventHandler.delegate = self;
