@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27DB37DE1F7D2EA1009DBF5B /* EventHandlerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB37DD1F7D2EA1009DBF5B /* EventHandlerImpl.swift */; };
+		27D754D11F8E4A9600CAA224 /* EventHandlerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D754D01F8E4A9600CAA224 /* EventHandlerImpl.swift */; };
 		27F65ABE1F7D26190086C46C /* RNEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F65ABD1F7D26190086C46C /* RNEventHandler.m */; };
 		27F65ABF1F7D26190086C46C /* RNEventHandler.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27F65ABC1F7D26190086C46C /* RNEventHandler.h */; };
 /* End PBXBuildFile section */
@@ -26,7 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		27DB37DD1F7D2EA1009DBF5B /* EventHandlerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandlerImpl.swift; sourceTree = "<group>"; };
+		27D754CF1F8E4A9600CAA224 /* RNEventHandler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNEventHandler-Bridging-Header.h"; sourceTree = "<group>"; };
+		27D754D01F8E4A9600CAA224 /* EventHandlerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHandlerImpl.swift; sourceTree = "<group>"; };
 		27F65AB91F7D26190086C46C /* libRNEventHandler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNEventHandler.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F65ABC1F7D26190086C46C /* RNEventHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNEventHandler.h; sourceTree = "<group>"; };
 		27F65ABD1F7D26190086C46C /* RNEventHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNEventHandler.m; sourceTree = "<group>"; };
@@ -64,7 +65,8 @@
 			children = (
 				27F65ABC1F7D26190086C46C /* RNEventHandler.h */,
 				27F65ABD1F7D26190086C46C /* RNEventHandler.m */,
-				27DB37DD1F7D2EA1009DBF5B /* EventHandlerImpl.swift */,
+				27D754D01F8E4A9600CAA224 /* EventHandlerImpl.swift */,
+				27D754CF1F8E4A9600CAA224 /* RNEventHandler-Bridging-Header.h */,
 			);
 			path = RNEventHandler;
 			sourceTree = "<group>";
@@ -100,7 +102,7 @@
 				TargetAttributes = {
 					27F65AB81F7D26190086C46C = {
 						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -128,7 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27F65ABE1F7D26190086C46C /* RNEventHandler.m in Sources */,
-				27DB37DE1F7D2EA1009DBF5B /* EventHandlerImpl.swift in Sources */,
+				27D754D11F8E4A9600CAA224 /* EventHandlerImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +251,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNEventHandler/RNEventHandler-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -265,6 +268,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNEventHandler/RNEventHandler-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
