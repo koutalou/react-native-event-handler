@@ -7,22 +7,3 @@
 //
 
 #import "RNEventHandler.h"
-
-@implementation RNEventHandler {
-    RCTResponseSenderBlock callback;
-}
-
-RCT_EXPORT_MODULE()
-
-- (void)eventWithEventType:(enum NSInteger) eventType {
-    self->callback(@[ [NSNull null], @{ @"eventType": [NSString stringWithFormat:@"%ld", eventType] } ]);
-}
-
-RCT_EXPORT_METHOD(watch:(RCTResponseSenderBlock)callback)
-{
-    EventHandlerImpl *eventHandler = [EventHandlerImpl shared];
-    eventHandler.delegate = self;
-    self->callback = callback;
-}
-
-@end

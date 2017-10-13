@@ -15,7 +15,8 @@
 #import "RCTBridgeModule.h"
 #endif
 
-@interface RNEventHandler : NSObject <RCTBridgeModule, EventHandlerDelegate>
+@interface RCT_EXTERN_MODULE(RNEventHandler, NSObject)
+
+RCT_EXTERN_METHOD(watch:(RCTResponseSenderBlock)callback)
 
 @end
-

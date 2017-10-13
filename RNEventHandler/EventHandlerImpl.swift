@@ -16,6 +16,24 @@ import UIKit
     func event(with eventType: EventType)
 }
 
+/* ReactNative interface class */
+@objc(RNEventHandler)
+class RNEventHandler: NSObject, EventHandlerDelegate {
+    
+    var callback: RCTResponseSenderBlock?
+    
+    @objc(watch:)
+    func watch(callback: @escaping RCTResponseSenderBlock) {
+        let handler = EventHandlerImpl.shared
+        handler.delegate = self
+        self.callback = callback
+    }
+    
+    func event(with eventType: EventType) {
+        callback?([ NSNull(), ["eventType": eventType.rawValue] ])
+    }
+}
+
 /* Shard singleton class */
 class EventHandlerImpl: NSObject {
     static let shared = EventHandlerImpl()
