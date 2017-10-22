@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RNEventHandler"
-  s.version      = "0.2.1"
+  s.version      = "0.3.0"
   s.summary      = "Native Event Handler for react-native"
 
   s.homepage     = "https://github.com/koutalou/react-native-event-handler"
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/koutalou/react-native-event-handler.git" }
 
-  s.source_files  = "RNEventHandler/*.{h,m,swift}"
+  s.source_files  = "RNEventHandler/*.{h,m}"
 
   s.dependency 'React'
 end

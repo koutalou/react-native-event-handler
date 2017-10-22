@@ -15,8 +15,19 @@
 #import "RCTBridgeModule.h"
 #endif
 
-@interface RCT_EXTERN_MODULE(RNEventHandler, NSObject)
+typedef NS_ENUM(NSInteger, RNEHEventType) {
+    RNEHEventTypeUserDidTakeScreenshot = 1,
+};
 
-RCT_EXTERN_METHOD(watch:(RCTResponseSenderBlock)callback)
+@protocol EventHandlerDelegate <NSObject>
+- (void)eventWithType:(NSInteger)type;
+@end
+
+@interface RNEventHandler : NSObject <RCTBridgeModule, EventHandlerDelegate>
+@end
+
+@interface EventHandlerImpl: NSObject
++ (EventHandlerImpl *)shared;
+@property (nonatomic, weak) id<EventHandlerDelegate> delegate;
 
 @end
