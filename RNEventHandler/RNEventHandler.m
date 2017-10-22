@@ -15,7 +15,7 @@
 RCT_EXPORT_MODULE()
 
 - (void)eventWithType:(NSInteger) type {
-    self->callback(@[ [NSNull null], @{ @"eventType": [NSString stringWithFormat:@"%ld", type] } ]);
+    self->callback(@[ [NSNull null], @{ @"eventType": [NSNumber numberWithInteger:type] } ]);
 }
 
 RCT_EXPORT_METHOD(watch:(RCTResponseSenderBlock)callback)

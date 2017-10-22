@@ -1,6 +1,6 @@
 {
   "name": "react-native-event-handler",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Native Event Handler for react-native",
   "main": "eventhandler.js",
   "scripts": {

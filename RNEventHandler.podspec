@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RNEventHandler"
-  s.version      = "0.3.1"
+  s.version      = "0.3.2"
   s.summary      = "Native Event Handler for react-native"
 
   s.homepage     = "https://github.com/koutalou/react-native-event-handler"
