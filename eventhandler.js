@@ -5,7 +5,7 @@ module.exports = {
 	return RNEventHandler.watch(callback);
     },
 
-    const RNEventType = {
+    RNEventType = {
 	nativeEventTypeUserDidTakeScreenshot: 1,
     },
 };
