@@ -25,6 +25,8 @@ RCT_EXPORT_METHOD(watch:(RCTResponseSenderBlock)callback)
     self->callback = callback;
 }
 
+@end
+
 @implementation EventHandlerImpl
 
 + (EventHandlerImpl *)shared
