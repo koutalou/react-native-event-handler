@@ -25,6 +25,20 @@ RCT_EXPORT_METHOD(watch:(RCTResponseSenderBlock)callback)
     self->callback = callback;
 }
 
+- (NSDictionary *)constantsToExport
+{
+    return @{
+             @"nativeEventTypeUserDidTakeScreenshot" : @(RNEHEventTypeUserDidTakeScreenshot)
+             };
+};
+
+@end
+
+@implementation RCTConvert (NativeEventType)
+RCT_ENUM_CONVERTER(RNEHEventType, (@{
+                                     @"nativeEventTypeUserDidTakeScreenshot" : @(RNEHEventTypeUserDidTakeScreenshot)
+                                     }),
+                   RNEHEventTypeUserDidTakeScreenshot, integerValue)
 @end
 
 @implementation EventHandlerImpl
